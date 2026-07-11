@@ -1,0 +1,15 @@
+Nebula font — license note (from the font's original Note.txt):
+
+"Please note that this font is free for personal use only, which means
+you may use it for free as long as you don't use it for commercial
+purposes."
+
+A student club website is a gray area under this kind of license —
+it depends on whether SAST's use counts as personal or commercial/
+organizational in the license owner's eyes. If the site is going to be
+public-facing and used to promote/recruit for the club, it's worth
+buying the commercial license before launch:
+https://www.creativefabrica.com/product/nebula/
+
+This is a licensing question for SAST to resolve, not a technical one —
+the font is already wired into the site and ready to use either way.
