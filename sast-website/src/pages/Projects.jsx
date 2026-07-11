@@ -1,4 +1,5 @@
 import Reveal from "../components/Reveal";
+import { asset } from "../utils/asset";
 import { projects } from "../data/projects";
 
 /* ── per-project doodle icons (SVG) ─────────────────────────── */
@@ -150,16 +151,16 @@ export default function Projects() {
 
             {/* ── floating B&W snapshot photos in the gaps ── */}
             <div className="projects-snap projects-snap-1">
-              <img src="/images/projects/nebula.png" alt="SAST Nebula poster" className="projects-snap-img" />
+              <img src={asset("/images/projects/nebula.png")} alt="SAST Nebula poster" className="projects-snap-img" />
             </div>
             <div className="projects-snap projects-snap-2">
-              <img src="/images/projects/grp.png" alt="SAST group" className="projects-snap-img" />
+              <img src={asset("/images/projects/grp.png")} alt="SAST group" className="projects-snap-img" />
             </div>
             <div className="projects-snap projects-snap-3">
-              <img src="/images/projects/bp.png" alt="SAST VR demo" className="projects-snap-img" />
+              <img src={asset("/images/projects/bp.png")} alt="SAST VR demo" className="projects-snap-img" />
             </div>
             <div className="projects-snap projects-snap-4">
-              <img src="/images/projects/bg.png" alt="SAST CAD gears" className="projects-snap-img" />
+              <img src={asset("/images/projects/bg.png")} alt="SAST CAD gears" className="projects-snap-img" />
             </div>
 
             {/* ── project cards ── */}

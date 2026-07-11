@@ -82,5 +82,6 @@ function localCmsPlugin() {
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), localCmsPlugin()],
+  base: '/SAST_A_NEW_REALM/',
 })
 

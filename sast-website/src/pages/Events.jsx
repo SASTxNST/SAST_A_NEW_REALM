@@ -1,4 +1,5 @@
 import Reveal from "../components/Reveal";
+import { asset } from "../utils/asset";
 import { upcomingEvents, pastEvents } from "../data/events";
 
 function EventRow({ e, i, past }) {
@@ -61,23 +62,23 @@ export default function Events() {
 
             {/* Overlapping photo cards */}
             <div className="collage-card card-1 photo">
-              <img src="/images/events/e1.png" alt="SAST Event 1" />
+              <img src={asset("/images/events/e1.png")} alt="SAST Event 1" />
               <span className="mono card-label">EVT_NEBULA</span>
             </div>
             <div className="collage-card card-2 photo">
-              <img src="/images/events/e2.png" alt="SAST Event 2" />
+              <img src={asset("/images/events/e2.png")} alt="SAST Event 2" />
               <span className="mono card-label">EVT_TRACKER</span>
             </div>
             <div className="collage-card card-3 photo">
-              <img src="/images/events/e3.png" alt="SAST Event 3" />
+              <img src={asset("/images/events/e3.png")} alt="SAST Event 3" />
               <span className="mono card-label">EVT_SAT_V2</span>
             </div>
             <div className="collage-card card-4 photo">
-              <img src="/images/events/e4.png" alt="SAST Event 4" />
+              <img src={asset("/images/events/e4.png")} alt="SAST Event 4" />
               <span className="mono card-label">EVT_MAPPING</span>
             </div>
             <div className="collage-card card-5 photo">
-              <img src="/images/events/e5.png" alt="SAST Event 5" />
+              <img src={asset("/images/events/e5.png")} alt="SAST Event 5" />
               <span className="mono card-label">EVT_T_DELTA</span>
             </div>
           </div>

@@ -1,5 +1,6 @@
 import { useMemo } from "react";
 import Reveal from "../components/Reveal";
+import { asset } from "../utils/asset";
 import { team } from "../data/team";
 
 export default function Team() {
@@ -34,7 +35,7 @@ export default function Team() {
                 <div className="team-row-president">
                   <Reveal className="team-card team-card-leader">
                     <div className="team-photo photo">
-                      <img src={president.image} alt={president.name} />
+                      <img src={asset(president.image)} alt={president.name} />
                     </div>
                     <h3 className="team-name">{president.name}</h3>
                     <p className="team-role mono">{president.role}</p>
@@ -53,7 +54,7 @@ export default function Team() {
                   {vicePresidents.map((vp, idx) => (
                     <Reveal key={vp.name} delay={idx * 100} className="team-card team-card-leader">
                       <div className="team-photo photo">
-                        <img src={vp.image} alt={vp.name} />
+                        <img src={asset(vp.image)} alt={vp.name} />
                       </div>
                       <h3 className="team-name">{vp.name}</h3>
                       <p className="team-role mono">{vp.role}</p>
@@ -73,7 +74,7 @@ export default function Team() {
                   {members.map((member, idx) => (
                     <Reveal key={member.name} delay={(idx % 6) * 60} className="team-card">
                       <div className="team-photo photo">
-                        <img src={member.image} alt={member.name} />
+                        <img src={asset(member.image)} alt={member.name} />
                       </div>
                       <h3 className="team-name">{member.name}</h3>
                       <p className="team-role mono">{member.role}</p>

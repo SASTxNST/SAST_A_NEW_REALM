@@ -1,5 +1,6 @@
 import Reveal from "../components/Reveal";
 import OrbitRing from "../components/OrbitRing";
+import { asset } from "../utils/asset";
 import { divisions } from "../data/divisions";
 import { about } from "../data/about";
 
@@ -125,17 +126,17 @@ export default function About() {
           <div className="about-story-photos">
             <div className="story-photo-wrap photo-wrap-1">
               <div className="story-photo photo">
-                <img src="/images/about/story-1.png" alt="Looking through telescope at sunset" />
+                <img src={asset("/images/about/story-1.png")} alt="Looking through telescope at sunset" />
               </div>
             </div>
             <div className="story-photo-wrap photo-wrap-2">
               <div className="story-photo photo">
-                <img src="/images/about/story-2.jpg" alt="Team meeting discussion" />
+                <img src={asset("/images/about/story-2.jpg")} alt="Team meeting discussion" />
               </div>
             </div>
             <div className="story-photo-wrap photo-wrap-3">
               <div className="story-photo photo">
-                <img src="/images/about/story-3.png" alt="Student project team posing" />
+                <img src={asset("/images/about/story-3.png")} alt="Student project team posing" />
               </div>
             </div>
           </div>

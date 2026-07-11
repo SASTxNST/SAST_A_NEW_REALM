@@ -7,7 +7,7 @@
   inset: 0;
   z-index: -1;
   overflow: hidden;
-  background: radial-gradient(120% 100% at 50% -10%, #0c1230 0%, #05070d 65%);
+  background: #000000;
 }
 
 .starfield {
