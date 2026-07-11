@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { NavLink, Link } from "react-router-dom";
+import { asset } from "../utils/asset";
 
 const LINKS = [
   { to: "/about", label: "About" },
@@ -22,7 +23,7 @@ export default function Navbar() {
     <header className={`nav ${scrolled ? "nav-scrolled" : ""}`}>
       <div className="container nav-inner">
         <Link to="/" className="nav-brand" onClick={() => setOpen(false)}>
-          <img src="/assets/logo.png" alt="SAST" />
+          <img src={asset("/assets/logo.png")} alt="SAST" />
         </Link>
 
         <nav className="nav-links" aria-label="Primary">

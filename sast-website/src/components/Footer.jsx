@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { asset } from "../utils/asset";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -6,7 +7,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="container footer-inner">
         <div className="footer-brand">
-          <img src="/assets/logo.png" alt="SAST" className="footer-logo" />
+          <img src={asset("/assets/logo.png")} alt="SAST" className="footer-logo" />
           <p className="footer-tagline">Powered by curiosity, driven by stars.</p>
           <div className="footer-campaign">A NEW REALM</div>
         </div>
