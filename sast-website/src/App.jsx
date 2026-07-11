@@ -11,9 +11,16 @@ import Team from "./pages/Team";
 import Join from "./pages/Join";
 import Admin from "./pages/Admin";
 
+// React Router's basename must NOT have a trailing slash — but Vite's
+// import.meta.env.BASE_URL always includes one (e.g. "/SAST_A_NEW_REALM/").
+// Passing that straight through breaks matching for the exact root route
+// ("/"), which is why the homepage rendered blank while every other page
+// worked fine. Stripping the trailing slash here fixes it.
+const basename = import.meta.env.BASE_URL.replace(/\/$/, "");
+
 export default function App() {
   return (
-    <BrowserRouter basename={import.meta.env.BASE_URL}>
+    <BrowserRouter basename={basename}>
       <Starfield />
       <ScrollToTop />
       <Navbar />
