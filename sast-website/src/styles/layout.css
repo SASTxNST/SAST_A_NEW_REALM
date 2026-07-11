@@ -1,0 +1,304 @@
+/* ============================================================
+   Starfield
+   ============================================================ */
+/* Space Background Container */
+.space-bg-container {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  background: radial-gradient(120% 100% at 50% -10%, #0c1230 0%, #05070d 65%);
+}
+
+.starfield {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* Nebula Clouds (Low-opacity glowing blurred radial blobs) */
+.nebula-cloud {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  z-index: 2;
+  filter: blur(120px);
+}
+
+.nebula-1 {
+  top: 10%;
+  left: 5%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(46, 75, 216, 0.12) 0%, rgba(0, 0, 0, 0) 70%);
+}
+
+.nebula-2 {
+  bottom: 15%;
+  right: 10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(147, 51, 234, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
+}
+
+.nebula-3 {
+  top: 50%;
+  left: 55%;
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, rgba(30, 58, 138, 0.14) 0%, rgba(0, 0, 0, 0) 70%);
+}
+
+/* Technical Blueprints Overlay */
+.space-blueprints-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.mono {
+  font-family: var(--mono);
+}
+
+/* ============================================================
+   Navbar
+   ============================================================ */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid transparent;
+  transition: background 0.3s ease, border-color 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+.nav-scrolled {
+  background: rgba(5, 7, 13, 0.82);
+  backdrop-filter: blur(10px);
+  border-bottom-color: var(--hairline);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.nav-brand img {
+  height: 22px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  margin-right: auto;
+  margin-left: 12px;
+}
+
+.nav-link {
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  color: var(--bone-dim);
+  position: relative;
+  padding: 4px 0;
+  transition: color 0.2s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 1px;
+  background: var(--ion);
+  transition: width 0.25s ease;
+}
+
+.nav-link:hover,
+.nav-link-active {
+  color: var(--bone);
+}
+
+.nav-link:hover::after,
+.nav-link-active::after {
+  width: 100%;
+}
+
+.nav-cta {
+  padding: 10px 20px;
+}
+
+.nav-burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  padding: 6px;
+}
+
+.nav-burger span {
+  width: 22px;
+  height: 1.5px;
+  background: var(--bone);
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.nav-burger-open span:nth-child(1) {
+  transform: translateY(6.5px) rotate(45deg);
+}
+.nav-burger-open span:nth-child(2) {
+  opacity: 0;
+}
+.nav-burger-open span:nth-child(3) {
+  transform: translateY(-6.5px) rotate(-45deg);
+}
+
+.nav-mobile {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0 28px 20px;
+}
+
+@media (max-width: 860px) {
+  .nav-links,
+  .nav-cta {
+    display: none;
+  }
+  .nav-burger {
+    display: flex;
+  }
+  .nav-mobile {
+    display: none;
+    max-height: 0;
+    overflow: hidden;
+  }
+  .nav-mobile-open {
+    display: flex;
+    max-height: 480px;
+  }
+  .nav-mobile-link {
+    font-family: var(--mono);
+    font-size: 14px;
+    color: var(--bone-dim);
+    padding: 12px 0;
+    border-bottom: 1px solid var(--hairline);
+  }
+  .nav-mobile .btn {
+    margin-top: 14px;
+    justify-content: center;
+  }
+}
+
+/* ============================================================
+   Footer
+   ============================================================ */
+.footer {
+  border-top: 1px solid var(--hairline);
+  padding-top: 64px;
+  margin-top: 60px;
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr;
+  gap: 40px;
+  padding-bottom: 48px;
+}
+
+.footer-logo {
+  height: 20px;
+  margin-bottom: 14px;
+}
+
+.footer-tagline {
+  color: var(--bone-faint);
+  font-family: var(--mono);
+  font-size: 13px;
+  max-width: 260px;
+}
+
+.footer-campaign {
+  border-top: 1px solid var(--hairline);
+  padding-top: 12px;
+  margin-top: 18px;
+  display: inline-block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  color: var(--ion-dim);
+  text-transform: uppercase;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-links-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 24px;
+}
+
+.footer-col a {
+  color: var(--bone-dim);
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.footer-col a:hover {
+  color: var(--ion);
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 28px;
+  border-top: 1px solid var(--hairline);
+  font-size: 12.5px;
+  color: var(--bone-faint);
+}
+
+.footer-mono {
+  font-family: var(--mono);
+  letter-spacing: 0.08em;
+}
+
+@media (max-width: 720px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+}
+
+/* ============================================================
+   Orbit ring positioning
+   ============================================================ */
+.orbit-ring {
+  position: absolute;
+  pointer-events: none;
+}
+
+.orbit-satellite circle:first-child {
+  filter: drop-shadow(0 0 4px #f4f5fa);
+}

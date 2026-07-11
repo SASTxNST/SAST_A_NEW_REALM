@@ -1,0 +1,1274 @@
+/* ============================================================
+   Hero (home)
+   ============================================================ */
+.hero {
+  position: relative;
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(6rem, 24vw, 20rem);
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(110, 140, 255, 0.14);
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+
+.hero-orbit {
+  top: 50%;
+  left: 50%;
+  width: 900px;
+  transform: translate(-50%, -50%);
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  padding-top: 60px;
+}
+
+.hero-title {
+  font-size: clamp(2.4rem, 6vw, 4.6rem);
+  margin: 22px 0 26px;
+  max-width: 900px;
+}
+
+.hero-lede {
+  margin-bottom: 36px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* ============================================================
+   Stats strip
+   ============================================================ */
+.stats-strip {
+  border-top: 1px solid var(--hairline);
+  border-bottom: 1px solid var(--hairline);
+  padding: 40px 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.stat-value {
+  font-size: 2rem;
+  color: var(--ion);
+}
+
+.stat-label {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--bone-faint);
+}
+
+@media (max-width: 720px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ============================================================
+   Shared section heading
+   ============================================================ */
+.section-title {
+  font-size: clamp(1.6rem, 3.4vw, 2.6rem);
+  margin: 16px 0 20px;
+  max-width: 640px;
+}
+
+.section-head {
+  margin-bottom: 48px;
+}
+
+/* ============================================================
+   Mission teaser
+   ============================================================ */
+.mission-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.mission-link {
+  margin-top: 28px;
+}
+
+@media (max-width: 860px) {
+  .mission-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+/* ============================================================
+   Achievements teaser (log list)
+   ============================================================ */
+.log-list {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--hairline);
+  margin-bottom: 32px;
+}
+
+.log-row {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 24px;
+  padding: 26px 0;
+  border-bottom: 1px solid var(--hairline);
+}
+
+.log-date {
+  color: var(--ion);
+  font-size: 13px;
+  padding-top: 3px;
+}
+
+.log-title {
+  font-size: 1.05rem;
+  margin-bottom: 6px;
+}
+
+.log-detail {
+  color: var(--bone-dim);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .log-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}
+
+/* ============================================================
+   Teaser project cards (home)
+   ============================================================ */
+.teaser-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.project-card {
+  display: block;
+  padding: 26px;
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.project-card:hover {
+  border-color: var(--ion-dim);
+  transform: translateY(-4px);
+}
+
+.project-card-top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--bone-faint);
+  margin-bottom: 22px;
+}
+
+.project-status {
+  color: var(--lime);
+}
+
+.project-card-name {
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+}
+
+.project-card-cat {
+  color: var(--bone-faint);
+  font-size: 13px;
+}
+
+@media (max-width: 860px) {
+  .teaser-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================
+   Event banner (home)
+   ============================================================ */
+.event-banner {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  border-top: 1px solid var(--hairline);
+  border-bottom: 1px solid var(--hairline);
+}
+
+.event-orbit {
+  top: 50%;
+  left: 50%;
+  width: 700px;
+  transform: translate(-50%, -50%);
+  opacity: 0.6;
+}
+
+.event-banner-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.event-banner .section-title {
+  max-width: 720px;
+}
+
+.event-banner .lede {
+  max-width: 500px;
+  margin: 0 auto 30px;
+}
+
+/* ============================================================
+   Join CTA (home)
+   ============================================================ */
+.join-cta-inner {
+  text-align: center;
+}
+
+.join-cta .section-title {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.join-cta .lede {
+  margin: 0 auto 30px;
+}
+
+/* ============================================================
+   Generic page hero (non-home pages)
+   ============================================================ */
+.page-hero {
+  position: relative;
+  padding: 150px 0 90px;
+  overflow: hidden;
+}
+
+.page-hero-compact {
+  padding: 130px 0 70px;
+}
+
+.page-hero-centered .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.page-hero-centered .page-hero-title {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-hero-centered .lede {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+.page-hero-orbit {
+  top: -60px;
+  right: -180px;
+  width: 620px;
+}
+
+.page-hero-title {
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  margin: 18px 0 24px;
+  max-width: 780px;
+  position: relative;
+  z-index: 1;
+}
+
+.page-hero .lede {
+  position: relative;
+  z-index: 1;
+}
+
+/* ============================================================
+   About page
+   ============================================================ */
+.page-hero-about-bg {
+  position: relative;
+  margin-top: -59px;
+  padding-top: 209px;
+  background: #000;
+}
+
+.page-hero-about-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("/images/about/hero-bg.png") no-repeat center center;
+  background-size: cover;
+  filter: grayscale(1) contrast(1.2) brightness(0.35);
+  opacity: 1;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.page-hero-about-bg .container {
+  position: relative;
+  z-index: 2;
+}
+
+.page-hero-projects-bg {
+  position: relative;
+  margin-top: -59px;
+  padding-top: 209px;
+  padding-bottom: 120px;
+  background: #000;
+}
+
+.page-hero-projects-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("/images/projects/hero-bg.jpg") no-repeat center center;
+  background-size: cover;
+  filter: grayscale(1) contrast(1.2) brightness(0.35);
+  opacity: 1;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.page-hero-projects-bg .container {
+  position: relative;
+  z-index: 2;
+}
+
+
+.about-story-container {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 60px;
+  align-items: center;
+}
+
+@media (max-width: 960px) {
+  .about-story-container {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
+
+.about-story-photos {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1.25;
+}
+
+@media (max-width: 960px) {
+  .about-story-photos {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+}
+
+.story-photo-wrap {
+  position: absolute;
+  border: 1px solid var(--hairline);
+  border-radius: 4px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55);
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), z-index 0s, box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.story-photo-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(1) contrast(1.15) brightness(0.92) !important;
+  transition: filter 0.4s ease, transform 0.4s ease !important;
+}
+
+.story-photo-wrap:hover {
+  z-index: 10 !important;
+  transform: scale(1.05) rotate(0deg) !important;
+  box-shadow: 0 20px 48px rgba(110, 140, 255, 0.2);
+  border-color: var(--ion-dim);
+}
+
+.story-photo-wrap:hover img {
+  filter: grayscale(0.1) contrast(1.05) saturate(1.1) brightness(0.98) !important;
+}
+
+.photo-wrap-1 {
+  top: 0;
+  left: 0;
+  width: 52%;
+  aspect-ratio: 3 / 4;
+  z-index: 3;
+  transform: rotate(-3deg);
+}
+
+.photo-wrap-2 {
+  top: 42%;
+  right: -15px;
+  width: 65%;
+  aspect-ratio: 16 / 10;
+  z-index: 1;
+  transform: rotate(2deg);
+}
+
+.photo-wrap-3 {
+  bottom: -20px;
+  left: 0;
+  width: 50%;
+  aspect-ratio: 1 / 1;
+  z-index: 2;
+  transform: rotate(-2deg);
+}
+
+/* Snaking Roadmap Container styling */
+.roadmap-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 70px auto 0;
+  padding: 60px 0;
+}
+
+.roadmap-blueprint-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.roadmap-path-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.roadmap-cards {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 65px; /* spacing to let path curve snakingly */
+}
+
+.roadmap-card-wrap {
+  display: flex;
+  width: 100%;
+}
+
+.card-left {
+  justify-content: flex-start;
+}
+
+.card-right {
+  justify-content: flex-end;
+}
+
+.roadmap-card {
+  width: 44%;
+  padding: 30px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  background: var(--panel);
+  border: 1px solid var(--hairline);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Organic blob border-radius */
+.blob-shape-1 { border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%; }
+.blob-shape-2 { border-radius: 55% 45% 40% 60% / 50% 60% 40% 50%; }
+.blob-shape-3 { border-radius: 60% 40% 50% 50% / 45% 50% 50% 55%; }
+.blob-shape-4 { border-radius: 45% 55% 60% 40% / 55% 45% 55% 45%; }
+.blob-shape-5 { border-radius: 50% 50% 70% 30% / 40% 60% 40% 60%; }
+.blob-shape-6 { border-radius: 40% 60% 50% 50% / 50% 40% 60% 50%; }
+
+.roadmap-card-content {
+  flex: 1;
+}
+
+.roadmap-card-doodle {
+  width: 95px;
+  height: 95px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ion-dim);
+  opacity: 0.85;
+  transition: all 0.4s ease;
+}
+
+.roadmap-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--ion);
+  box-shadow: 0 20px 48px rgba(110, 140, 255, 0.22);
+}
+
+.roadmap-card:hover .roadmap-card-doodle {
+  color: var(--ion);
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* Launch badge style */
+.roadmap-launch-badge {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--void);
+  border: 1px solid var(--ion-dim);
+  box-shadow: 0 0 20px rgba(110, 140, 255, 0.4);
+  padding: 8px 18px;
+  border-radius: 30px;
+  z-index: 10;
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  animation: pulse-glow-badge 2s infinite ease-in-out;
+}
+
+.launch-rocket {
+  color: var(--accent);
+}
+
+@keyframes pulse-glow-badge {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(110, 140, 255, 0.3);
+    border-color: var(--ion-dim);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(110, 140, 255, 0.6);
+    border-color: var(--ion);
+  }
+}
+
+.division-index {
+  color: var(--ion);
+  font-size: 13px;
+}
+
+.division-name {
+  font-size: 1.25rem;
+  margin: 14px 0 10px;
+}
+
+.division-blurb {
+  color: var(--bone-dim);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 860px) {
+  .roadmap-container {
+    padding: 20px 0;
+    margin-top: 40px;
+  }
+  .roadmap-path-svg {
+    display: none;
+  }
+  .roadmap-cards {
+    gap: 32px;
+  }
+  .roadmap-card {
+    width: 100%;
+    border-radius: 12px !important;
+    padding: 24px;
+    gap: 20px;
+  }
+  .roadmap-launch-badge {
+    display: none;
+  }
+}
+
+/* ── floating snapshot photos (projects roadmap) ── */
+.projects-snap {
+  position: absolute;
+  z-index: 3;
+  pointer-events: auto;
+}
+
+.projects-snap-img {
+  display: block;
+  width: 200px;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+  filter: grayscale(1) contrast(1.15) brightness(0.85);
+  transition: filter 0.4s ease, transform 0.4s ease;
+  object-fit: cover;
+}
+
+.projects-snap:hover .projects-snap-img {
+  filter: grayscale(0.4) contrast(1.05) brightness(1.0);
+  transform: scale(1.04);
+}
+
+/* Between card 1 (left) and card 2 (right) — sits on the right side */
+.projects-snap-1 {
+  top: 12%;
+  right: 4%;
+  transform: rotate(2deg);
+}
+
+/* Between card 2 (right) and card 3 (left) — sits on the left side */
+.projects-snap-2 {
+  top: 40%;
+  left: 3%;
+  transform: rotate(-3deg);
+  width: 180px;
+}
+
+/* Between card 3 (left) and card 4 (right) — sits on the right side */
+.projects-snap-3 {
+  top: 68%;
+  right: 3%;
+  transform: rotate(1.5deg);
+  width: 160px;
+}
+
+/* Below card 3 (left) and card 4 (right) — sits on the left side */
+.projects-snap-4 {
+  top: 86%;
+  left: 4%;
+  transform: rotate(-2deg);
+  width: 170px;
+}
+
+@media (max-width: 860px) {
+  .projects-snap { display: none; }
+}
+
+
+/* ============================================================
+   Projects page
+   ============================================================ */
+
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 44px;
+}
+
+.filter-pill {
+  font-family: var(--mono);
+  font-size: 12.5px;
+  letter-spacing: 0.05em;
+  padding: 9px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--hairline);
+  background: transparent;
+  color: var(--bone-dim);
+  transition: all 0.2s ease;
+}
+
+.filter-pill:hover {
+  border-color: var(--ion-dim);
+  color: var(--bone);
+}
+
+.filter-pill-active {
+  background: var(--nebula);
+  border-color: var(--nebula);
+  color: var(--bone);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.project-tile {
+  padding: 30px;
+}
+
+.project-tile-top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--bone-faint);
+  margin-bottom: 24px;
+}
+
+.project-tile-name {
+  font-size: 1.5rem;
+  margin-bottom: 6px;
+}
+
+.project-tile-cat {
+  color: var(--ion);
+  font-size: 12.5px;
+  margin-bottom: 16px;
+}
+
+.project-tile-summary {
+  color: var(--bone-dim);
+  line-height: 1.65;
+}
+
+@media (max-width: 720px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================
+   Achievements timeline
+   ============================================================ */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid var(--hairline);
+  margin-left: 6px;
+}
+
+.timeline-row {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 24px;
+  padding: 0 0 40px 28px;
+  position: relative;
+}
+
+.timeline-marker {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--ion);
+  font-size: 13px;
+  padding-top: 22px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -6px;
+  top: 26px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--void);
+  border: 2px solid var(--ion);
+}
+
+.timeline-content {
+  padding: 22px 26px;
+}
+
+.timeline-title {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.timeline-detail {
+  color: var(--bone-dim);
+  line-height: 1.65;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 600px) {
+  .timeline-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding-left: 22px;
+  }
+  .timeline-marker {
+    padding-top: 0;
+  }
+}
+
+/* ============================================================
+   Events page
+   ============================================================ */
+.events-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.event-row {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 24px;
+  padding: 28px;
+}
+
+.event-row-past {
+  opacity: 0.68;
+}
+
+.event-date {
+  color: var(--ion);
+  font-size: 13px;
+  padding-top: 3px;
+}
+
+.event-title {
+  font-size: 1.15rem;
+  margin-bottom: 6px;
+}
+
+.event-location {
+  color: var(--bone-faint);
+  font-size: 12.5px;
+  margin-bottom: 10px;
+}
+
+.event-detail {
+  color: var(--bone-dim);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.events-past {
+  padding-top: 0;
+}
+
+/* ── page hero with collage layout (events page) ── */
+.page-hero-events-custom {
+  position: relative;
+  padding: 140px 0 80px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--hairline);
+}
+
+.page-hero-events-container {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.page-hero-events-text {
+  position: relative;
+  z-index: 2;
+}
+
+/* Collage container on the right side */
+.events-hero-collage-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  border-radius: 8px;
+  border: 1px dashed rgba(46, 75, 216, 0.3);
+  overflow: hidden;
+  background: rgba(10, 15, 30, 0.4);
+}
+
+.events-hero-blueprint {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Overlapping photo collage cards */
+.collage-card {
+  position: absolute;
+  z-index: 2;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), z-index 0.3s ease, filter 0.4s ease;
+  background: var(--panel);
+}
+
+.collage-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  filter: grayscale(1) contrast(1.1) brightness(0.85);
+  transition: filter 0.4s ease;
+}
+
+/* Text label simulating blueprint tags */
+.collage-card .card-label {
+  display: block;
+  font-size: 10px;
+  color: var(--ion);
+  padding: 6px 10px;
+  background: rgba(10, 15, 30, 0.85);
+  border-top: 1px solid var(--hairline);
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+/* Hover behaviors */
+.collage-card:hover {
+  z-index: 10 !important;
+  transform: scale(1.08) rotate(0deg) !important;
+}
+
+.collage-card:hover img {
+  filter: grayscale(0.2) contrast(1.05) brightness(1.0);
+}
+
+/* Specific position & offsets of collage elements */
+.collage-card.card-1 {
+  top: 10%;
+  left: 6%;
+  width: 145px;
+  transform: rotate(-6deg);
+  z-index: 2;
+}
+
+.collage-card.card-2 {
+  top: 48%;
+  left: 14%;
+  width: 155px;
+  transform: rotate(4deg);
+  z-index: 4;
+}
+
+.collage-card.card-3 {
+  top: 5%;
+  right: 12%;
+  width: 135px;
+  transform: rotate(3deg);
+  z-index: 1;
+}
+
+.collage-card.card-4 {
+  top: 42%;
+  right: 6%;
+  width: 150px;
+  transform: rotate(-5deg);
+  z-index: 3;
+}
+
+.collage-card.card-5 {
+  top: 24%;
+  left: 32%;
+  width: 175px;
+  transform: rotate(-1deg);
+  z-index: 5; /* Keep group photo centered/above by default */
+}
+
+/* Responsive configurations */
+@media (max-width: 960px) {
+  .page-hero-events-container {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .events-hero-collage-container {
+    height: 380px;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .events-hero-collage-container {
+    height: 290px;
+  }
+  .collage-card.card-1 { width: 110px; }
+  .collage-card.card-2 { width: 120px; }
+  .collage-card.card-3 { width: 105px; }
+  .collage-card.card-4 { width: 115px; }
+  .collage-card.card-5 { width: 130px; }
+}
+
+.events-main-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+
+@media (max-width: 600px) {
+  .event-row {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+}
+
+
+
+/* ============================================================
+   Team page
+   ============================================================ */
+.team-page {
+  padding-top: 16px;
+}
+
+.team-hierarchy {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  margin-top: 16px;
+}
+
+
+.team-hierarchy-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.team-group-title {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--ion);
+  margin-bottom: 32px;
+  position: relative;
+  text-align: center;
+}
+
+.team-group-title::after {
+  content: "";
+  display: block;
+  width: 32px;
+  height: 1px;
+  background: var(--ion-dim);
+  margin: 10px auto 0;
+  opacity: 0.6;
+}
+
+.team-row-president {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.team-row-vps {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.team-row-members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 48px 32px;
+  width: 100%;
+}
+
+.team-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 170px;
+  text-align: center;
+}
+
+.team-card-leader {
+  width: 200px;
+}
+
+.team-photo {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border: 1px solid var(--hairline);
+  margin-bottom: 16px;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.team-name {
+  font-size: 1.05rem;
+  margin-bottom: 4px;
+  font-weight: 600;
+  color: var(--bone);
+}
+
+.team-role {
+  color: var(--ion-dim);
+  font-size: 11.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 640px) {
+  .team-hierarchy {
+    gap: 48px;
+  }
+  .team-row-vps {
+    gap: 24px;
+  }
+  .team-card-leader {
+    width: 150px;
+  }
+  .team-card {
+    width: 130px;
+  }
+  .team-name {
+    font-size: 0.95rem;
+  }
+}
+
+
+/* ============================================================
+   Join page
+   ============================================================ */
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.step-card {
+  padding: 26px;
+}
+
+.step-n {
+  color: var(--ion);
+  font-size: 13px;
+}
+
+.step-title {
+  font-size: 1.1rem;
+  margin: 14px 0 8px;
+}
+
+.step-detail {
+  color: var(--bone-dim);
+  font-size: 0.93rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 860px) {
+  .steps-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 520px) {
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.join-form-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1fr;
+  gap: 60px;
+}
+
+@media (max-width: 860px) {
+  .join-form-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+.join-form {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-family: var(--mono);
+  font-size: 12.5px;
+  letter-spacing: 0.04em;
+  color: var(--bone-dim);
+}
+
+.field input,
+.field select,
+.field textarea {
+  font-family: var(--body);
+  font-size: 15px;
+  color: var(--bone);
+  background: var(--void);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  transition: border-color 0.2s ease;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-color: var(--ion-dim);
+}
+
+.field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+@media (max-width: 480px) {
+  .field-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.join-form button {
+  align-self: flex-start;
+  border: none;
+  margin-top: 6px;
+}
+
+.form-success {
+  padding: 40px;
+}
+
+.form-success-title {
+  font-size: 1.5rem;
+  margin: 14px 0 12px;
+  font-family: var(--display);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}

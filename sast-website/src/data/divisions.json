@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Tech team",
+    "blurb": "Develops the web platforms, ground control stations, and telemetry systems that interface with our flights."
+  },
+  {
+    "name": "R&D team",
+    "blurb": "Drives innovation in aerospace science, publishing studies and prototyping advanced propulsion and recovery technologies."
+  },
+  {
+    "name": "Product team",
+    "blurb": "Coordinates mission timelines, resource allocation, and product lifecycle management for all active builds."
+  },
+  {
+    "name": "Design team",
+    "blurb": "Handles structural modeling, CAD design, aerodynamic simulations, and CAD reviews for our rockets and rovers."
+  },
+  {
+    "name": "Electronics team",
+    "blurb": "Builds custom PCBs, sensors, avionics bays, and flight control electronics that power our airborne hardware."
+  },
+  {
+    "name": "Content creation team",
+    "blurb": "Manages public relations, prints documentation, and produces visual media for events and sponsors."
+  }
+]

@@ -1,0 +1,155 @@
+{
+  "upcomingEvents": [
+    {
+      "date": "AUG 2026 (TENTATIVE)",
+      "title": "Onboarding and Club Intake",
+      "location": "TBD",
+      "detail": "TBD"
+    },
+    {
+      "date": "AUG 2026 (TENTATIVE)",
+      "title": "Movie Night",
+      "location": "TBD",
+      "detail": "TBD"
+    },
+    {
+      "date": "SEP 2026 (TENTATIVE)",
+      "title": "SAST Orienthon",
+      "location": "TBD",
+      "detail": "TBD"
+    },
+    {
+      "date": "THROUGHOUT THE YEAR",
+      "title": "Speaker Sessions",
+      "location": "TBD",
+      "detail": "Ongoing series — no fixed date yet, recurring across the year."
+    },
+    {
+      "date": "NOV 2026 (TENTATIVE)",
+      "title": "NASA Space Apps Challenge",
+      "location": "TBD",
+      "detail": "TBD"
+    }
+  ],
+  "pastEvents": [
+    {
+      "date": "FEB 1, 2026",
+      "title": "T+Delta hackathon",
+      "location": "TBD",
+      "detail": "TBD",
+      "image": "/images/events/e5.png"
+    },
+    {
+      "date": "NOV 29, 2025",
+      "title": "Open Space Hackathon",
+      "location": "TBD",
+      "detail": "TBD"
+    },
+    {
+      "date": "NOV 10, 2025",
+      "title": "RIT 101",
+      "location": "TBD",
+      "detail": "TBD"
+    },
+    {
+      "date": "NOV 3, 2025",
+      "title": "Satellite 101",
+      "location": "TBD",
+      "detail": "TBD",
+      "image": "/images/events/e2.png"
+    },
+    {
+      "date": "OCT 4, 2025",
+      "title": "NASA Space Apps Challenge",
+      "location": "TBD",
+      "detail": "TBD",
+      "image": "/images/events/e4.png"
+    },
+    {
+      "date": "OCT 1 – DEC 20, 2025",
+      "title": "Satellite V2",
+      "location": "TBD",
+      "detail": "TBD",
+      "image": "/images/events/e3.png"
+    },
+    {
+      "date": "SEP 17, 2025",
+      "title": "ESP and Electronics 103",
+      "location": "TBD",
+      "detail": "TBD"
+    },
+    {
+      "date": "SEP 15, 2025",
+      "title": "ESP and Electronics 102",
+      "location": "TBD",
+      "detail": "TBD"
+    },
+    {
+      "date": "SEP 10, 2025",
+      "title": "AutoCAD 102",
+      "location": "TBD",
+      "detail": "TBD"
+    },
+    {
+      "date": "SEP 8, 2025",
+      "title": "ESP and Electronics 101",
+      "location": "TBD",
+      "detail": "TBD"
+    },
+    {
+      "date": "SEP 3, 2025",
+      "title": "AutoCAD 101",
+      "location": "TBD",
+      "detail": "TBD"
+    },
+    {
+      "date": "SEP 1, 2025 – JAN 4, 2026",
+      "title": "SAST DIY KITS Business Innovation",
+      "location": "TBD",
+      "detail": "TBD"
+    },
+    {
+      "date": "AUG 10 – DEC 20, 2025",
+      "title": "RIT Project",
+      "location": "TBD",
+      "detail": "TBD"
+    },
+    {
+      "date": "JUN 18, 2025",
+      "title": "Nebula SAST x DevClub",
+      "location": "TBD",
+      "detail": "TBD"
+    },
+    {
+      "date": "JUN 15, 2025",
+      "title": "Nebula SAST x OOPS",
+      "location": "TBD",
+      "detail": "TBD"
+    },
+    {
+      "date": "JUN 11, 2025",
+      "title": "Nebula SAST x DevClub",
+      "location": "TBD",
+      "detail": "TBD"
+    },
+    {
+      "date": "JUN 7, 2025",
+      "title": "Nebula SAST x SOCS",
+      "location": "TBD",
+      "detail": "TBD"
+    },
+    {
+      "date": "JUN 4, 2025",
+      "title": "Nebula SAST x DevClub",
+      "location": "TBD",
+      "detail": "TBD"
+    },
+    {
+      "date": "JUN 2 – JUN 23, 2025",
+      "title": "Project Nebula",
+      "location": "TBD",
+      "detail": "TBD",
+      "image": "/images/events/e1.png"
+    }
+  ]
+}
