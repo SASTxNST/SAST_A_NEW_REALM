@@ -218,6 +218,16 @@ export default function Home() {
               See our team
             </Link>
           </div>
+
+          {/* Mobile-only floating collage to fill empty space under CTAs */}
+          <Reveal delay={300} className="hero-mobile-collage">
+            <div className="collage-img collage-img-top">
+              <img src={asset("/images/home/h2.png")} alt="SAST rocket launch" />
+            </div>
+            <div className="collage-img collage-img-bottom">
+              <img src={asset("/images/home/h1.png")} alt="SAST team at work" />
+            </div>
+          </Reveal>
         </div>
       </section>
 

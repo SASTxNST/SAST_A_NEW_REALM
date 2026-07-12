@@ -1613,18 +1613,12 @@
   }
 
   .projects-collage {
-    height: 280px;
-    width: 100%;
-  }
-
-  .collage-img-top {
-    width: 58%;
-    height: 180px;
-  }
-
-  .collage-img-bottom {
-    width: 52%;
-    height: 200px;
+    position: relative;
+    top: 0;
+    right: 0;
+    margin: 40px auto 0;
+    width: 360px;
+    height: 310px;
   }
 }
 
@@ -1678,7 +1672,6 @@
   z-index: 1;
 }
 
-/* Main content */
 .terminal-body {
   position: relative;
   z-index: 2;
@@ -1687,12 +1680,17 @@
   align-items: flex-start;
   gap: 0;
   padding: 40px;
+  width: 100%;
+  max-width: 800px;
+  box-sizing: border-box;
 }
 
 .terminal-output {
   display: flex;
   flex-direction: column;
   gap: 18px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .terminal-line {
@@ -1702,7 +1700,10 @@
   letter-spacing: 0.12em;
   text-transform: uppercase;
   margin: 0;
-  white-space: pre;
+  white-space: pre-wrap;
+  word-break: break-word;
+  width: 100%;
+  box-sizing: border-box;
   line-height: 1.4;
 
   /* Neon glow */
@@ -1758,3 +1759,64 @@
   /* standalone cursor line after all text is typed */
   min-height: 1.4em;
 }
+
+/* ══════════════════════════════════════════
+   HERO MOBILE COLLAGE
+   ══════════════════════════════════════════ */
+
+.hero-mobile-collage {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  /* Prevent large SAST logo overflow on phone viewports */
+  .hero-logo-space {
+    margin: 30px 0;
+    height: 120px;
+  }
+
+  .hero-logo-text {
+    font-size: clamp(3.5rem, 15vw, 6rem);
+  }
+
+  /* Reduce terminal padding for phone viewports */
+  .terminal-body {
+    padding: 20px;
+  }
+
+  /* Hide the projects teaser collage on phone screens */
+  .projects-collage {
+    display: none;
+  }
+
+  /* Show the collage under CTAs in the hero section on phone screens */
+  .hero-mobile-collage {
+    display: block;
+    position: relative;
+    width: 285px;
+    height: 220px;
+    margin: 48px auto 0;
+    z-index: 2;
+  }
+  
+  .hero-mobile-collage .collage-img-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 170px;
+    height: 130px;
+    z-index: 1;
+    pointer-events: all;
+  }
+  
+  .hero-mobile-collage .collage-img-bottom {
+    position: absolute;
+    top: 85px;
+    left: 105px;
+    width: 155px;
+    height: 135px;
+    z-index: 2;
+    pointer-events: all;
+  }
+}
+

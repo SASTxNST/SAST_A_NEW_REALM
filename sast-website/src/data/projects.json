@@ -4,27 +4,27 @@
     "name": "RIT: Automation Phase",
     "blurb": "Designing and building an automated test bench for rocket motor static fire — sensors, data logging, and remote ignition, all built in-house.",
     "status": "In progress",
-    "year": "2025"
+    "year": "2026"
   },
   {
     "id": "sast-oreinthon",
     "name": "SAST Oreinthon",
     "blurb": "A 24-hour hackathon hosted by SAST, bringing together students to tackle aerospace and tech challenges under one roof. Taking place mid-September.",
     "status": "Upcoming",
-    "year": "2025"
+    "year": "2026"
   },
   {
     "id": "isro-bah",
     "name": "ISRO BAH",
     "blurb": "Participating in ISRO's Bharatiya Antariksha Hackathon — developing a space-tech solution addressing a real agency-issued problem statement.",
     "status": "In progress",
-    "year": "2025"
+    "year": "2026"
   },
   {
     "id": "nasa-space-apps",
     "name": "NASA Space Apps Challenge",
     "blurb": "Building a data-driven solution for NASA's global hackathon, tackling an open challenge spanning Earth observation, space science, or exploration.",
     "status": "Upcoming",
-    "year": "2025"
+    "year": "2026"
   }
 ]

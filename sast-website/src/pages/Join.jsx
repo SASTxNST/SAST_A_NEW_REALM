@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 
 const LINES = [
   { prefix: "> ", text: "SYSTEM STATUS: STANDBY" },
-  { prefix: "> ", text: "ONBOARDING WILL START SOON..." },
+  { prefix: "> ", text: "Sorry the onboarding has not started yet, check in a few lightyears" },
 ];
 
 const TYPING_SPEED = 55;   // ms per character

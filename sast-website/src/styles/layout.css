@@ -178,6 +178,7 @@
   }
   .nav-burger {
     display: flex;
+    margin-left: auto;
   }
   .nav-mobile {
     display: none;

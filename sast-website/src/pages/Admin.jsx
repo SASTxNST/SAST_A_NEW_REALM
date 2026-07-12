@@ -77,7 +77,7 @@ export default function Admin() {
   // Authenticate Passcode
   const handleLogin = (e) => {
     e.preventDefault();
-    if (passcode === "sast2026") {
+    if (passcode === (import.meta.env.VITE_ADMIN_PASSCODE || "admin")) {
       setIsLoggedIn(true);
       sessionStorage.setItem("sast_admin_auth", "true");
       setAuthError("");
