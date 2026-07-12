@@ -42,4 +42,4 @@ npm run deploy
 ```
 
 Live site URL:
-👉 **https://RedRangerWentWild.github.io/SAST_A_NEW_REALM/**
+👉 **https://SASTxNST.github.io/SAST_A_NEW_REALM/**

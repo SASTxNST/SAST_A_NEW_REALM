@@ -58,4 +58,4 @@ npm run deploy
 ```
 
 The live website can be viewed at:
-👉 **https://RedRangerWentWild.github.io/SAST_A_NEW_REALM/**
+👉 **https://SASTxNST.github.io/SAST_A_NEW_REALM/**
