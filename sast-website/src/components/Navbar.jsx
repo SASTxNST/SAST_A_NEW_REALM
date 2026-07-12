@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { asset } from "../utils/asset";
+import AudioPlayer from "./AudioPlayer";
 
 const LINKS = [
   { to: "/about", label: "About" },
@@ -37,6 +38,8 @@ export default function Navbar() {
             </NavLink>
           ))}
         </nav>
+
+        <AudioPlayer />
 
         <Link to="/join" className="btn btn-primary nav-cta">
           Join SAST

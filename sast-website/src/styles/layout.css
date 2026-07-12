@@ -303,3 +303,110 @@
 .orbit-satellite circle:first-child {
   filter: drop-shadow(0 0 4px #f4f5fa);
 }
+
+/* ============================================================
+   Audio Toggle Button
+   ============================================================ */
+.audio-control-container {
+  display: inline-flex;
+  align-items: center;
+}
+
+.audio-toggle-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(16, 21, 40, 0.6);
+  border: 1px solid var(--hairline);
+  padding: 8px 14px;
+  border-radius: var(--radius);
+  color: var(--bone-dim);
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  transition: all 0.25s ease;
+  backdrop-filter: blur(4px);
+}
+
+.audio-toggle-btn:hover {
+  border-color: var(--ion-dim);
+  color: var(--bone);
+  background: rgba(110, 140, 255, 0.08);
+  box-shadow: 0 0 16px rgba(110, 140, 255, 0.1);
+}
+
+/* Playing state overrides */
+.audio-toggle-btn.playing {
+  border-color: rgba(200, 255, 77, 0.4); /* Lime accent */
+  color: var(--lime);
+  background: rgba(200, 255, 77, 0.04);
+}
+
+.audio-toggle-btn.playing:hover {
+  border-color: var(--lime);
+  box-shadow: 0 0 16px rgba(200, 255, 77, 0.15);
+}
+
+/* Audio waves layout */
+.audio-waves {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  width: 14px;
+  height: 12px;
+}
+
+.audio-waves .bar {
+  width: 2px;
+  height: 3px;
+  background-color: currentColor;
+  border-radius: 1px;
+  transition: height 0.2s ease, background-color 0.2s ease;
+}
+
+/* Bouncing animations for playing state */
+.audio-toggle-btn.playing .bar-1 {
+  animation: bounceBar 1.2s ease-in-out infinite alternate;
+  animation-delay: 0.1s;
+}
+.audio-toggle-btn.playing .bar-2 {
+  animation: bounceBar 0.9s ease-in-out infinite alternate;
+  animation-delay: 0.4s;
+}
+.audio-toggle-btn.playing .bar-3 {
+  animation: bounceBar 1.4s ease-in-out infinite alternate;
+  animation-delay: 0.2s;
+}
+.audio-toggle-btn.playing .bar-4 {
+  animation: bounceBar 1.1s ease-in-out infinite alternate;
+  animation-delay: 0.6s;
+}
+
+/* Paused or muted state */
+.audio-toggle-btn.paused .bar {
+  height: 3px !important;
+  opacity: 0.5;
+}
+
+/* Keyframes for audio waves */
+@keyframes bounceBar {
+  0% {
+    height: 3px;
+  }
+  100% {
+    height: 12px;
+  }
+}
+
+.audio-label {
+  user-select: none;
+  font-weight: 500;
+}
+
+@media (max-width: 860px) {
+  .audio-control-container {
+    margin-left: auto;
+    margin-right: 12px;
+  }
+}
+
