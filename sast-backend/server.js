@@ -58,6 +58,28 @@ app.post('/api/register', async (req, res) => {
   }
 });
 
+app.get('/api/registrations', async (req, res) => {
+  try {
+    const passcode = req.headers['x-admin-passcode'];
+    const expectedPasscode = process.env.ADMIN_PASSCODE || 'admin';
+    
+    if (passcode !== expectedPasscode) {
+      return res.status(401).json({ success: false, error: 'Unauthorized Access' });
+    }
+    
+    // Fetch all registrations, sorted by newest first
+    const registrations = await Registration.find().sort({ createdAt: -1 });
+    
+    res.status(200).json({
+      success: true,
+      data: registrations
+    });
+  } catch (error) {
+    console.error('Fetch Registrations Error:', error);
+    res.status(500).json({ success: false, error: 'Server Error' });
+  }
+});
+
 app.get('/api/health', (req, res) => {
   res.status(200).json({ status: 'OK', message: 'Server is running' });
 });

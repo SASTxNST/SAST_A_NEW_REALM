@@ -10,6 +10,7 @@ import Events from "./pages/Events";
 import Team from "./pages/Team";
 import Join from "./pages/Join";
 import Admin from "./pages/Admin";
+import Registrations from "./pages/Registrations";
 
 // React Router's basename must NOT have a trailing slash — but Vite's
 // import.meta.env.BASE_URL always includes one (e.g. "/SAST_A_NEW_REALM/").
@@ -33,6 +34,7 @@ export default function App() {
           <Route path="/team" element={<Team />} />
           <Route path="/join" element={<Join />} />
           <Route path="/admin" element={<Admin />} />
+          <Route path="/recruits" element={<Registrations />} />
         </Routes>
       </main>
       <Footer />
